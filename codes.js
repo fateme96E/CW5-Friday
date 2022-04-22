@@ -49,28 +49,41 @@ Try to get ‘David’ and get Ava`s age using Destructuring assignmen
 
 
 
-let citiesState = {
-    iran : ['tehran','sari','tabriz','ahvaz'],
-    england : ['london','manchester','liverpool'],
-    spain: ['madrid','barcelon','pompluna','sevill']
-}
-function createStates(newObj){
-    citiesState = {...citiesState,...newObj};
-    console.log(citiesState);
-}
-let newObj = {france: ['paris']};
-createStates(newObj);
+// let citiesState = {
+//     iran : ['tehran','sari','tabriz','ahvaz'],
+//     england : ['london','manchester','liverpool'],
+//     spain: ['madrid','barcelon','pompluna','sevill']
+// }
+// function createStates(newObj){
+//     citiesState = {...citiesState,...newObj};
+//     console.log(citiesState);
+// }
+// let newObj = {france: ['paris']};
+// createStates(newObj);
 
-function addCityState(cityName, key){
-    citiesState[key] = [...citiesState[key], cityName];
-    console.log(citiesState);
-}
-addCityState('karaj','iran');
+// function addCityState(cityName, key){
+//     citiesState[key] = [...citiesState[key], cityName];
+//     console.log(citiesState);
+// }
+// addCityState('karaj','iran');
 
-function addCitysToState(key, cities){
-    citiesState[key] = [...citiesState[key], ...cities];
-    console.log(citiesState);
-}
-let cities = ['kerman', 'shiraz'];
-addCitysToState('iran',cities);
+// function addCitysToState(key, cities){
+//     citiesState[key] = [...citiesState[key], ...cities];
+//     console.log(citiesState);
+// }
+// let cities = ['kerman', 'shiraz'];
+// addCitysToState('iran',cities);
 
+
+
+
+function joinLists(arr){
+    let newArr = [];
+    arr.forEach(item => {
+        newArr = [...newArr, ...item];
+    })
+    console.log(newArr);
+}
+
+matrix = [[2], [4, 6], [78, 76, 25]];
+joinLists(matrix);
