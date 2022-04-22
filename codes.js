@@ -84,22 +84,50 @@ Try to get ‘David’ and get Ava`s age using Destructuring assignmen
 // matrix = [[2], [4, 6], [78, 76, 25]];
 // joinLists(matrix);
 
-const users = [
-    {name: "ali", 
-      addresses: ["edatalat"], 
-      phones: [09019856491] 
-    },
-    { name: "reza", 
-    addresses: ["taleghani"], 
-    phones: [0911111111] 
-    },
-];
-let copiedUsers = JSON.parse(JSON.stringify(users));
-copiedUsers[0].name = "fateme";
-console.log('copiedUsers:');
-console.log(copiedUsers);
+// const users = [
+//     {name: "ali",
+//       addresses: ["edatalat"],
+//       phones: [09019856491]
+//     },
+//     { name: "reza",
+//     addresses: ["taleghani"],
+//     phones: [0911111111]
+//     },
+// ];
+// let copiedUsers = JSON.parse(JSON.stringify(users));
+// copiedUsers[0].name = "fateme";
+// console.log('copiedUsers:');
+// console.log(copiedUsers);
 
-console.log('users:');
-console.log(users);
+// console.log('users:');
+// console.log(users);
 
+function countProperties(obj) {
+//   let count = 0;
+//   for (let key in obj) {
+//     count++;
+//   }
 
+    let keys = Object.keys(obj);
+    let count = keys.length;
+    console.log(count);
+    
+}
+let user = {
+  name: "Mike",
+  friend: ["John", "Paul", "Jimmy"],
+  families: [
+    { name: "David", age: 20 },
+    { name: "Ava", age: 25 },
+  ],
+  location: {
+    region: "England",
+    country: "United Kingdom",
+  },
+  aboutMe: {
+    status: "Single",
+    pet: "Dog",
+  },
+};
+
+countProperties(user);
