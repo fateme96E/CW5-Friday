@@ -47,8 +47,6 @@ Try to get ‘David’ and get Ava`s age using Destructuring assignmen
 // console.log(David);
 // console.log(age2);
 
-
-
 // let citiesState = {
 //     iran : ['tehran','sari','tabriz','ahvaz'],
 //     england : ['london','manchester','liverpool'],
@@ -74,16 +72,34 @@ Try to get ‘David’ and get Ava`s age using Destructuring assignmen
 // let cities = ['kerman', 'shiraz'];
 // addCitysToState('iran',cities);
 
+// function joinLists(arr){
+//     let newArr = [];
+//     arr.forEach(item => {
+//         console.log([...newArr]);
+//         newArr = [...newArr, ...item];
+//     })
+//     console.log(newArr);
+// }
+
+// matrix = [[2], [4, 6], [78, 76, 25]];
+// joinLists(matrix);
+
+const users = [
+    {name: "ali", 
+      addresses: ["edatalat"], 
+      phones: [09019856491] 
+    },
+    { name: "reza", 
+    addresses: ["taleghani"], 
+    phones: [0911111111] 
+    },
+];
+let copiedUsers = JSON.parse(JSON.stringify(users));
+copiedUsers[0].name = "fateme";
+console.log('copiedUsers:');
+console.log(copiedUsers);
+
+console.log('users:');
+console.log(users);
 
 
-
-function joinLists(arr){
-    let newArr = [];
-    arr.forEach(item => {
-        newArr = [...newArr, ...item];
-    })
-    console.log(newArr);
-}
-
-matrix = [[2], [4, 6], [78, 76, 25]];
-joinLists(matrix);
